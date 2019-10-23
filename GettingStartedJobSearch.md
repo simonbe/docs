@@ -12,6 +12,7 @@ A good practice means making lots of varied calls initiated by real users.
 * [Results](#Results)
 * [Errors](#Errors)
 * [Use cases](#Use-cases)
+* [Whats up](#whats-next)
 
 
 ## Short introduction
@@ -218,3 +219,7 @@ In the Swagger GUI it's possible to use the X-fields to define which fields to i
 A very common use case is COLLECT ALL THE ADDS. We don't want you to use the search API for this. It's expensive in terms of band width, CPU cycles and development time and it's not even guaranteed you'll get everything. Instead we'd like you to use our [bulk load API](https://jobstream.api.jobtechdev.se).
 
 
+# Whats next
+What's up for job ads - What we plan working on
+
+Besides the forever ongoing work of improving the search algorithm we are right now working on building a statistic API around published ads and made searches. Stay tuned for updates.
