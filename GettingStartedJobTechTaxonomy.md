@@ -3,14 +3,14 @@
 The aim of this text is to get users started with the JobTech Taxonomy ([Swagger-UI](http://jobtech-taxonomy-api-spec-jobtech-taxonomy-api.dev.services.jtech.se/v1/taxonomy/swagger-ui/index.html))
 
 # Table of Contents
-* [Short introduction](#Short introduction)
+* [Short introduction](#Introduction)
 * [Authentication](#Authentication)
 * [Endpoints](#Endpoints)
 * [Results](#Results)
 * [Errors](#Errors)
 
 
-## Short introduction
+## Introduction
 
 The endpoints for the JobTech Taxonomy API are:
 
