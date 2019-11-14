@@ -73,6 +73,8 @@ This endpoint returns the logo for a given ad's id number.
 
 	https://jobsearch.api.jobtechdev.se/ad/8430129/logo
 
+If no logo exists, a 1x1 pixel size white image is returned.
+
 ### Jobtech-Taxonomy
 If you need help finding the official names for occupations, skills, or geographic place we have temporarily built an endpoint which you will find at https://jobsearch.api.jobtechdev.se/. The real version will be launched during fall 2019. Check out [jobtechdev.se](https://www.jobtechdev.se/) for updates.
 
