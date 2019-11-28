@@ -36,7 +36,7 @@ For a more in depth documentation about Jobtech Taxonomy please see this guide:
 
 ## Authentication
 
-1. Follow the instructions on how to get and api key here [https://apirequest.jobtechdev.se/](https://apirequest.jobtechdev.se/)
+1. Follow the instructions on how to get and api key here: [https://apirequest.jobtechdev.se/](https://apirequest.jobtechdev.se/)
 
 2. If you are using curl you have to add the api-key in the headers like this:
 
