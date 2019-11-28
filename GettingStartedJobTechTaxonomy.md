@@ -1,30 +1,33 @@
-# JobTech Taxonomy Beta - Getting started
+# JobTech Taxonomy - Getting started
 
 The Jobtech Taxonomy API gives access to different taxonomies like occupation names, skills and SSYK, SNI etc. It’s main purpose is to act as a common language for labour market related systems.
 
-[You can reach the Jobtech Taxonomy API Swagger UI here.](http://taxonomy.api.jobtechdev.se/) FIX LINK TO SWAGGER!
-But first you need a key which you need to authenticate yourself. [How to get a key.](#Authentication).
+[Jobtech Taxonomy API Swagger UI](https://taxonomy.api.jobtechdev.se/v0/taxonomy/swagger-ui/index.html)
+
+In order to use the api you need a key which you need to authenticate yourself.
+
+[How to get a key](#authentication)
 
 
 
 # Table of Contents
-* [Short introduction](#Short introduction)
-* [Authentication](#Authentication)
-* [Endpoints](#Endpoints)
-* [Results](#Results)
-* [Errors](#Errors)
+* [Short introduction](#short-introduction)
+* [Authentication](#authentication)
+* [Endpoints](#endpoints)
+* [Results](#results)
+* [Errors](#errors)
 
 
 ## Short introduction
 The JobTech Taxonomy API is divided into three sections Main, Specific Types and Suggesters,
 
-The Main section contains the core functionalities of the API like retrieving concepts (words) from different taxonomies. It also has endpoints helping you to track and react to changes in the taxonomies. 
+The Main section contains the core functionalities of the API like retrieving concepts (words) from different taxonomies. It also has endpoints helping you to track and react to changes in the taxonomies.
 
 The Specific Types contains typed endpoints for taxonomies that contains specific fields like statistical codes for SSYK and SNI.
 
 The Suggesters section contains endpoints that helps end users finding values from the taxonomies when they are creating structured data with concepts from the taxonomies.
 
-For example there is an autocomplete endpoint that suggest concepts that can assist users creating CVs or job ads. 
+For example there is an autocomplete endpoint that suggest concepts that can assist users creating CVs or job ads.
 
 For a more in depth documentation about Jobtech Taxonomy please see this guide:
 
@@ -34,7 +37,7 @@ For a more in depth documentation about Jobtech Taxonomy please see this guide:
 
 Since the API is still in beta the authentication still requires some manual steps.
 
-1. [Apply for an api key here.](fix link to key page) 
+1. [Apply for an api key here.](https://apirequest.jobtechdev.se/)
 2. Contact our support at [support@jobtechdev.se](mailto:support@jobtechdev.se) for further assistance.
 
 
@@ -48,17 +51,17 @@ Below we only show the URLs. If you prefer the curl command, you type it like:
 
 
 #### /v1/taxonomy/main/concept/types
-This endpoint will list all available types in the taxonomies 
+This endpoint will list all available types in the taxonomies
 
 #### v1/taxonomy/main/relation/types
 This endpoint will list all available relation types in the taxonomies.
 
 The broader / narrower relation is for hierarchical relations.
- 
+
 The related relation is a non specific relation like a keyword that is related to an occupation name.
 
 The substitutability relation is for showing related occupations that can substitute one another.
-For example, if an employer wants to hire a  “Barnmorska, förlossning" but can’t find any they can do a search for a "Barnmorska, vårdavdelning/BB-avdelning" instead. The substitutability-percentage will show how well the occupation can substitute another occupation. 
+For example, if an employer wants to hire a  “Barnmorska, förlossning" but can’t find any they can do a search for a "Barnmorska, vårdavdelning/BB-avdelning" instead. The substitutability-percentage will show how well the occupation can substitute another occupation.
 
 
 
@@ -77,7 +80,7 @@ This request will fetch all concepts of type skill headline.
 http://jobtech-taxonomy-api-develop-jobtech-taxonomy-api.test.services.jtech.se/v1/taxonomy/main/concepts?related-ids=xAWr_WYq_JPP%20Uj5W_dft_Ssg&relation=narrower
 
 ```
-This request will fetch concepts that has a narrower relation from the concepts “Databaser” and “Operativsystem”.  
+This request will fetch concepts that has a narrower relation from the concepts “Databaser” and “Operativsystem”.
 
 ##### Example 2. Multiple types
 
@@ -97,13 +100,13 @@ This endpoint will list relations between two types of concepts in the taxonomie
 ```
 
 http://jobtech-taxonomy-api-develop-jobtech-taxonomy-api.test.services.jtech.se/v1/taxonomy/main/graph?edge-relation-type=broader&source-concept-type=occupation-name&target-concept-type=ssyk-level-4
- 
+
 http://jobtech-taxonomy-api-develop-jobtech-taxonomy-api.test.services.jtech.se/v1/taxonomy/main/graph?edge-relation-type=broader&source-concept-type=ssyk-level-4&target-concept-type=occupation-field
- 
+
 
 
 ```
-With the help of these two request you can build a tree view bottom up of the occupation-name -> ssyk-level-4 -> occupation-field hierarchy 
+With the help of these two request you can build a tree view bottom up of the occupation-name -> ssyk-level-4 -> occupation-field hierarchy
 
 
 ##### Example Occupation name substitutability
@@ -126,7 +129,7 @@ For example if a jobseeker is subscribing to job recommendations based on a spec
 This endpoint will list all deprecated concepts that has been replaced by another newer concept.
 
 ####  /v1/taxonomy/main/versions
-This endpoint will list all published versions of the taxonomies. 
+This endpoint will list all published versions of the taxonomies.
 
 ### Specific
 These endpoint acts like the  /v1/taxonomy/main/concepts but will also display specific metadata on the concepts like ssyk or country codes.
@@ -140,7 +143,7 @@ This endpoint is to help end users to find concepts in the taxonomies.
 
 ```
 http://jobtech-taxonomy-api-develop-jobtech-taxonomy-api.test.services.jtech.se/v1/taxonomy/suggesters/autocomplete?query-string=sc&type=skill&relation=narrower&related-ids=ShQw_McG_oti
- 
+
 
 ```
 With this request you can autocomplete programming languages starting on the letter “sc”
