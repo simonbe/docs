@@ -6,7 +6,7 @@ The Jobtech Taxonomy API gives access to different taxonomies like occupation na
 
 In order to use the api you need a key which you need to authenticate yourself.
 
-[How to get a key](#authentication)
+[How to get a key](https://apirequest.jobtechdev.se/)
 
 
 
@@ -19,15 +19,16 @@ In order to use the api you need a key which you need to authenticate yourself.
 
 
 ## Short introduction
-The JobTech Taxonomy API is divided into three sections Main, Specific Types and Suggesters,
+The JobTech Taxonomy API is divided into three sections Main, Specific Types and Suggesters.
 
 The Main section contains the core functionalities of the API like retrieving concepts (words) from different taxonomies. It also has endpoints helping you to track and react to changes in the taxonomies.
 
-The Specific Types contains typed endpoints for taxonomies that contains specific fields like statistical codes for SSYK and SNI.
+The Specific Types section contains typed endpoints for taxonomies that has specific fields like statistical codes for SSYK and SNI.
 
-The Suggesters section contains endpoints that helps end users finding values from the taxonomies when they are creating structured data with concepts from the taxonomies.
+The Suggesters section contains endpoints that helps end users finding values from the taxonomies when they are creating structured data based on the taxonomies.
 
 For example there is an autocomplete endpoint that suggest concepts that can assist users creating CVs or job ads.
+
 
 For a more in depth documentation about Jobtech Taxonomy please see this guide:
 
@@ -35,16 +36,20 @@ For a more in depth documentation about Jobtech Taxonomy please see this guide:
 
 ## Authentication
 
-Since the API is still in beta the authentication still requires some manual steps.
+1. Follow the instructions on how to get and api key here. [https://apirequest.jobtechdev.se/](https://apirequest.jobtechdev.se/)
 
-1. [Apply for an api key here.](https://apirequest.jobtechdev.se/)
-2. Contact our support at [support@jobtechdev.se](mailto:support@jobtechdev.se) for further assistance.
+2. If you are using curl you have to add the api-key in the headers like this:
 
+  ``` curl "{URL}" -H "accept: application/json" -H "api-key: {YOUR API KEY}" ```
+ 
+3. If you are using the swagger UI you have to log in with the "Authorize" button in the top right corner and add your api-key.
+
+![alt text](swagger-authorize.png "How to log into swagger")  
 
 ## Endpoints
 Below we only show the URLs. If you prefer the curl command, you type it like:
 
-  curl "{URL}" -H "accept: application/json" -H "api-key: {proper_key}"
+  curl "{URL}" -H "accept: application/json" -H "api-key: {YOUR API KEY}"
 
 ### Main
 
