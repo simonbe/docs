@@ -14,8 +14,6 @@ In order to use the api you need a key which you need to authenticate yourself.
 * [Introduction](#introduction)
 * [Status](#status)
 * [Versions](#versions)
-
-* [Current Status](#current-status)
 * [Authentication](#authentication)
 * [Endpoints](#endpoints)
 * [Results](#results)
@@ -40,7 +38,7 @@ For a more in depth documentation about Jobtech Taxonomy please see this guide:
 ## Status
 For the time being the Jobtech Taxonomy API is still in beta and minor breaking changes can still occur to the API event though 
 it's not very likely.  
-About SLA, our offer is that the Jobtech Taxonomy API is operating during office hours.  
+About SLA, our offer is that the Jobtech Taxonomy API will be operating during office hours.  
 If you are in need of a higher uptime you should implement a fall back solution with a local copy of the Jobtech Taxonomy.
 
 ## Versions
