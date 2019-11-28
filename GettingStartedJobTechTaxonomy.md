@@ -1,4 +1,4 @@
-# JobTech Taxonomy - Getting started
+# JobTech Taxonomy Beta - Getting started
 
 The Jobtech Taxonomy API gives access to different taxonomies like occupation names, skills and SSYK, SNI etc. It’s main purpose is to act as a common language for labour market related systems.
 
@@ -11,28 +11,48 @@ In order to use the api you need a key which you need to authenticate yourself.
 
 
 # Table of Contents
-* [Short introduction](#short-introduction)
+* [Introduction](#introduction)
+* [Status](#status)
+* [Versions](#versions)
+
+* [Current Status](#current-status)
 * [Authentication](#authentication)
 * [Endpoints](#endpoints)
 * [Results](#results)
 * [Errors](#errors)
 
 
-## Short introduction
+## Introduction
 The JobTech Taxonomy API is divided into three sections Main, Specific Types and Suggesters.
 
 The Main section contains the core functionalities of the API like retrieving concepts (words) from different taxonomies. It also has endpoints helping you to track and react to changes in the taxonomies.
 
 The Specific Types section contains typed endpoints for taxonomies that has specific fields like statistical codes for SSYK and SNI.
 
-The Suggesters section contains endpoints that helps end users finding values from the taxonomies when they are creating structured data based on the taxonomies.
-
-For example there is an autocomplete endpoint that suggest concepts that can assist users creating CVs or job ads.
+The Suggesters section contains endpoints that helps end users finding values from the taxonomies when they are creating structured data based on the taxonomies. There is an autocomplete endpoint that suggest concepts that can assist users creating CVs or job ads.
 
 
 For a more in depth documentation about Jobtech Taxonomy please see this guide:
 
-[https://github.com/JobtechSwe/jobtech-taxonomy-api/blob/master/GETTINGSTARTED.md](https://github.com/JobtechSwe/jobtech-taxonomy-api/blob/master/GETTINGSTARTED.md)
+[JobTechTaxonomyDocumentation.md](JobTechTaxonomyDocumentation.md)
+
+
+## Status
+For the time being the Jobtech Taxonomy API is still in beta and minor breaking changes can still occur to the API event though 
+it's not very likely.  
+About SLA, our offer is that the Jobtech Taxonomy API is operating during office hours.  
+If you are in need of a higher uptime you should implement a fall back solution with a local copy of the Jobtech Taxonomy.
+
+## Versions
+
+The content of the taxonomies is constantly being updated and changes will be released in a controlled manner.
+
+There are two versions accesible from the API at the time of writing this documentation.   
+Version 1 is from 2016  
+Version 2 is all changes after version 1 until we will remove the beta status on the API. 
+
+This means that version 2 is not fixed for the moment but will be in a future release of the API.
+
 
 ## Authentication
 
