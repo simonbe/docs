@@ -1,6 +1,8 @@
 # JobTech Taxonomy Beta - Getting started
 
-The Jobtech Taxonomy API gives access to different taxonomies like occupation names, skills and SSYK, SNI etc. It’s main purpose is to act as a common language for labour market related systems.
+The Jobtech Taxonomy API gives access to different taxonomies like occupation names, skills and SSYK, SNI etc.      
+
+It’s main purpose is to act as a common language for labour market related systems.
 
 [Jobtech Taxonomy API Swagger UI](https://taxonomy.api.jobtechdev.se/v0/taxonomy/swagger-ui/index.html)
 
@@ -38,8 +40,10 @@ For a more in depth documentation about Jobtech Taxonomy please see this guide:
 ## Status
 For the time being the Jobtech Taxonomy API is still in beta and minor breaking changes can still occur to the API event though 
 it's not very likely.  
-About SLA, our offer is that the Jobtech Taxonomy API will be operating during office hours.  
+About SLA, we will provide statistics on our actual uptime to give users a realistic idea on our availability.
+Our commitment is that the Jobtech Taxonomy API will be operating during office hours.  
 If you are in need of a higher uptime you should implement a fall back solution with a local copy of the Jobtech Taxonomy.
+
 
 ## Versions
 
