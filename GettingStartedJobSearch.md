@@ -73,6 +73,8 @@ This endpoint returns the logo for a given ad's id number.
 
 	https://jobsearch.api.jobtechdev.se/ad/8430129/logo
 
+If no logo exists, a 1x1 pixel size white image is returned.
+
 ### Jobtech-Taxonomy 
 **NB! this endpoint is depricated and will be terminated by end of 2020. Use our [Taxonomy API](https://jobtechdev.se/devguide/apis/taxonomy.html) API instead**
 
