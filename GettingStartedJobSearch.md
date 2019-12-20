@@ -73,7 +73,9 @@ This endpoint returns the logo for a given ad's id number.
 
 	https://jobsearch.api.jobtechdev.se/ad/8430129/logo
 
-### Jobtech-Taxonomy
+### Jobtech-Taxonomy 
+**NB! this endpoint is depricated and will be terminated by end of 2020. Use our [Taxonomy API](https://jobtechdev.se/devguide/apis/taxonomy.html) API instead**
+
 If you need help finding the official names for occupations, skills, or geographic place we have temporarily built an endpoint which you will find at https://jobsearch.api.jobtechdev.se/. The real version will be launched during fall 2019. Check out [jobtechdev.se](https://www.jobtechdev.se/) for updates.
 
 ## Results
@@ -121,6 +123,7 @@ Request URL
 
 	https://jobsearch.api.jobtechdev.se/taxonomy/search?offset=0&limit=10&q=souschef
 	
+**NB! this endpoint is depricated and will be terminated by end of 2020. Use our [Taxonomy API](https://jobtechdev.se/devguide/apis/taxonomy.html) API instead**
 
 Now you can use the conceptId (iugg_Qq9_QHH) in _Open-Search_ to fetch the ads registered with the term "souschef" in the occupation-name field:
 
@@ -130,8 +133,6 @@ Request URL
 	
 This will give a smaller result set with a higher certainty of actually being for a "souschef", however the result set will likely miss a few relevant ads since the occupation-name field isn't always set by employers. You should find that a larger set is more useful since there are multiple sorting factors working to show the most relevant hits first. We're also working to always improve the API in regards to unstructured data.
 
-_Note: The taxonomy endpoint is temporary. Please check [jobtechdev.se](https://www.jobtechdev.se/) for updates._
-
 ### Searching only within a specific field of work
 Firstly, use the _Jobtech-Taxonomy_ endpoint to get the Id for Data/IT (occupation field). You'll then make a free text search on the term "IT" narrowing down the search to occupation-field
 
@@ -139,13 +140,13 @@ Request URL
 
 	https://jobsearch.api.jobtechdev.se/taxonomy/search?offset=0&limit=10&q=IT
 
+**NB! this endpoint is depricated and will be terminated by end of 2020. Use our [Taxonomy API](https://jobtechdev.se/devguide/apis/taxonomy.html) API instead**
+
 In the response body you’ll find the conceptId (apaJ_2ja_LuF)for the term Data/IT. Use this with the search endpoint to define the field in which you want to get all the open-api. So now I want to combine this with my favorite language without all those snake related jobs ruining my search.
 
 Request URL
 
 	https://jobsearch.api.jobtechdev.se/search?occupation-field=apaJ_2ja_LuF&q=python&offset=0&limit=10
-
-_Note: The taxonomy endpoint is temporary. Please check [jobtechdev.se](https://www.jobtechdev.se/) for updates._
 
 ### Finding jobs near you
 You can filter your search on geographical terms picked up from the Taxonomy just the same way you can with occupation-titles and occupation-fields. (Concept_id doesn't work everywhere at the time of writing but you can use the numeral id's, they are very official and way less likely to change as skills and occupations sometimes do)
@@ -154,6 +155,8 @@ If you want to search for jobs in Norway you may free text query the taxonomy fo
 Request URL
 
        https://jobsearch.api.jobtechdev.se/taxonomy/search?offset=0&limit=10&q=norge
+
+**NB! this endpoint is depricated and will be terminated by end of 2020. Use our [Taxonomy API](https://jobtechdev.se/devguide/apis/taxonomy.html) API instead**
 
 And add that parameter conceptId (QJgN_Zge_BzJ) to the country field
 
@@ -172,7 +175,6 @@ Request URL
 
 	https://jobsearch.api.jobtechdev.se/search?offset=0&limit=10&position=59.3,17.6&position.radius=10
 
-_Note: The taxonomy endpoint is temporary. Please check [jobtechdev.se](https://www.jobtechdev.se/) for updates._
 
 ### Negative search
 So, this is very simple using our q-field. Let's say you want to find Unix jobs
@@ -195,13 +197,14 @@ Request URLs to get conceptId for Sweden and Swedish
 	https://jobsearch.api.jobtechdev.se/taxonomy/search?offset=0&limit=10&q=sverige&type=country
 	https://jobsearch.api.jobtechdev.se/taxonomy/search?offset=0&limit=10&q=svenska&type=language
 
+**NB! this endpoint is depricated and will be terminated by end of 2020. Use our [Taxonomy API](https://jobtechdev.se/devguide/apis/taxonomy.html) API instead**
+
 As return we get conceptId i46j_HmG_v64 for "Sverige" and conceptId zSLA_vw2_FXN for "Svenska".
 
 Request URL to get jobs in Swedish outside Sweden
 
       	https://jobsearch.api.jobtechdev.se/search?language=zSLA_vw2_FXN&country=-i46j_HmG_v64&offset=0&limit=10
 
-_Note: The taxonomy endpoint is temporary. Please check [jobtechdev.se](https://www.jobtechdev.se/) for updates._
 
 ### Customize the result set
 There's a lot of reasons you might want less fields for your search result set. In this case the idea is a map-based job search that plots needles where the jobs can be found based on a user search. Everything needed is the GPS coordinates for the needle and the id, employer, and headline for the ad so more info can be fetched once the user clicks on the needle. Probably, you also like to know total number of ads.
