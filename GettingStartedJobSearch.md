@@ -93,9 +93,9 @@ Unsuccessful queries will have a response code of:
 | HTTP Status code | Reason | Explanation |
 | ------------- | ------------- | -------------|
 | 400 | Bad Request | Something wrong in the query |
-| 401 | Unauthorized | You are not using a valid API key |
+| 401 | Unauthorized | You do not use a valid API key or use it in a wrong way |
 | 404 | Missing ad | The ad you requested is not available |
-| 429 | Rate limit exceeded | You requested too much during too short time |
+| 429 | Rate limit exceeded | You have sent too many requests in a given amount of time |
 | 500 | Internal Server Error | Something wrong on the server side |
 
 
