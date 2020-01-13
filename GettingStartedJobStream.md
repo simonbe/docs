@@ -44,11 +44,7 @@ If you’re looking for more advanced search options, please check our [JobSearc
 ## Results
 The results of your queries will be in [JSON](https://en.wikipedia.org/wiki/JSON) format. We won't attempt to explain the ad objects attribute by attribute in this document. Instead we've decided to try to include this in the data model which you can find in our [Swagger GUI](https://jobsearch.api.jobtechdev.se).
 
-Successful queries will have a response code of 200 and give you a result set that consists of:
-1. Some meta data about your search such as number of hits and the time it took to execute the query and 
-2. The ad events that happened within the timespan you set. 
-
-These events can be of 3 different kinds: New ads, updated ads, and removed ads. New and updated will look the same, the only thing that distinguishes them from each other is that an updated ad has an ID that's already in the database of open ads. 
+Successful queries will have a response code of 200 and give you a result set that consists of the ad events that happened within the timespan you set. These events can be of 3 different kinds: New ads, updated ads, and removed ads. New and updated will look the same, the only thing that distinguishes them from each other is that an updated ad has an ID that's already in the database of open ads. 
 
 A removal object looks like this:
 
