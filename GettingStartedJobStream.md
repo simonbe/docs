@@ -1,6 +1,6 @@
 # Stream API for job ads - getting started
 
-The aim of this text is to walk you through what you're seeing in the [Swagger-UI](https://jobstream.api.jobtechdev.se) to help you download all the job ads being published to Arbetsförmedlingen. This is much easier than using the search API to download all content.
+The aim of this text is to walk you through what you're seeing in the [Swagger-UI](https://jobstream.api.jobtechdev.se) to help you download all the job ads being published to Arbetsförmedlingen. This is much easier than using the search API to download all content. The jobstream API is best used indexing the ads by their id in your backend.
 
 # Table of Contents
 * [Authentication](#Authentication)
@@ -12,7 +12,7 @@ The aim of this text is to walk you through what you're seeing in the [Swagger-U
 
 ## Short introduction
 
-The endpoints for the ads search API are:
+The only endpoint for the ads stream API is:
 
 * [Stream](#Stream) - returning all active ads that have been updated after a given moment.
 
@@ -30,11 +30,11 @@ Below we only show the URLs. If you prefer the curl command, you type it like:
 ### Stream 
 /stream?{YYYY-MM-DDTHH:MM:SS}
 
-The stream endpoint will give you the job ads that are currently open for applications. Along with 
+The stream endpoint will give you the job ads that are currently open for application. Along with removals and updates of those ads. 
 	
-If you only want to get the updates from a certain time point you add it in the format YYYY-MM-DDTHH:MM:SS, for example 2020-01-11T10:00:00. Rate limit is one request per minute.
+You are required to give a certain time point from when you want your ads in the format YYYY-MM-DDTHH:MM:SS, for example 2021-01-11T10:00:00. Rate limit is one request per minute.
 
-  	https://jobstream.api.jobtechdev.se/stream?date=2019-10-03T10%3A00%3A00
+  	https://jobstream.api.jobtechdev.se/stream?date=2020-02-03T10:00:00
 
 If you’re looking for more advanced search options, please check our [JobSearch API](https://jobtechdev.se/devguide/apis/jobsearch.html).
 
@@ -45,13 +45,15 @@ Successful queries will have a response code of 200 and give you a result set th
 1. Some meta data about your search such as number of hits and the time it took to execute the query and 
 2. The ad events that happened within the timespan you set. 
 
-This can be of 3 different kinds: New ads, updated ads, and removed ads. New and updated will look the same, the only thing that distinguisis them is that an updated ad has an ID thats all ready in the database of open ads. 
+These events can be of 3 different kinds: New ads, updated ads, and removed ads. New and updated will look the same, the only thing that distinguishes them from eachother is that an updated ad has an ID that's already in the database of open ads. 
 
-{
-    "id": 8460272,
-    "removed": true,
-    "removed_date": "2020-01-13T13:03:26"
-  }
+A removal object looks like this:
+
+	{
+	    "id": 8460272,
+	    "removed": true,
+	    "removed_date": "2020-01-13T13:03:26"
+	  }
 
 ## Errors
 Unsuccessful queries will have a response code of:
