@@ -1,6 +1,6 @@
 # Stream API for job ads - getting started
 
-The aim of this text is to walk you through what you're seeing in the [Swagger-UI](https://jobstream.api.jobtechdev.se) to give you can download all of the job ads we have. This is much better than using the search API to download all content.
+The aim of this text is to walk you through what you're seeing in the [Swagger-UI](https://jobstream.api.jobtechdev.se) to help you download all the job ads being published to Arbetsförmedlingen. This is much easier than using the search API to download all content.
 
 # Table of Contents
 * [Authentication](#Authentication)
@@ -16,7 +16,7 @@ The endpoints for the ads search API are:
 
 * [Stream](#Stream) - returning all active ads that have been updated after a given moment.
 
-Easiest way to try out the API is to go to the [swagger page](https://jobstream.api.jobtechdev.se/).
+The easiest way to try out the API is to go to the [swagger page](https://jobstream.api.jobtechdev.se/).
 But first you need a key which you need to authenticate yourself.
 
 ## Authentication
@@ -34,7 +34,7 @@ The stream endpoint in the first section will return job ads that are currently 
 
 	https://jobstream.api.jobtechdev.se/stream
 	
-If you only want to get the updates from a certain time point you add it in the format YYYY-MM-DDTHH:MM:SS, for example 2019-06-11T10:00:00. Rate limit is one request per minute.
+If you only want to get the updates from a certain time point you add it in the format YYYY-MM-DDTHH:MM:SS, for example 2020-01-11T10:00:00. Rate limit is one request per minute.
 
   	https://jobstream.api.jobtechdev.se/stream?date=2019-10-03T10%3A00%3A00
 
