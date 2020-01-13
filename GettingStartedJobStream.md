@@ -32,9 +32,12 @@ Below we only show the URLs. If you prefer the curl command, you type it like:
 
 The stream endpoint will give you the job ads that are currently open for application. Along with removals and updates of those ads. 
 	
-You are required to give a certain time point from when you want your ads in the format YYYY-MM-DDTHH:MM:SS, for example 2021-01-11T10:00:00. Rate limit is one request per minute.
+You are required to give a certain time point from when you want your ads in the format YYYY-MM-DDTHH:MM:SS, for example 2021-01-11T10:00:00. Rate limit is one request per minute. An organisation that wants to keep up a realtime copy of all the ads from Arbetsformedlingen would have their app doing this: 
 
-  	https://jobstream.api.jobtechdev.se/stream?date=2020-02-03T10:00:00
+  	/stream?date=2020-02-03T10:00:00
+	/stream?date=2020-02-03T10:01:00
+	/stream?date=2020-02-03T10:02:00
+
 
 If you’re looking for more advanced search options, please check our [JobSearch API](https://jobtechdev.se/devguide/apis/jobsearch.html).
 
@@ -45,7 +48,7 @@ Successful queries will have a response code of 200 and give you a result set th
 1. Some meta data about your search such as number of hits and the time it took to execute the query and 
 2. The ad events that happened within the timespan you set. 
 
-These events can be of 3 different kinds: New ads, updated ads, and removed ads. New and updated will look the same, the only thing that distinguishes them from eachother is that an updated ad has an ID that's already in the database of open ads. 
+These events can be of 3 different kinds: New ads, updated ads, and removed ads. New and updated will look the same, the only thing that distinguishes them from each other is that an updated ad has an ID that's already in the database of open ads. 
 
 A removal object looks like this:
 
@@ -54,6 +57,8 @@ A removal object looks like this:
 	    "removed": true,
 	    "removed_date": "2020-01-13T13:03:26"
 	  }
+
+These are typically grouped together in your result set so if you're request has a larger timespan than a few minutes you may have to scroll to se actual job ads.
 
 ## Errors
 Unsuccessful queries will have a response code of:
