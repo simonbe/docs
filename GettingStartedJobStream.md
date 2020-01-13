@@ -28,11 +28,9 @@ Below we only show the URLs. If you prefer the curl command, you type it like:
 	curl "{URL}" -H "accept: application/json" -H "api-key: {proper_key}"
 	
 ### Stream 
-/stream?{search text}
+/stream?{YYYY-MM-DDTHH:MM:SS}
 
-The stream endpoint in the first section will return job ads that are currently open for applications. Great if you like to rebase your data.
-
-	https://jobstream.api.jobtechdev.se/stream
+The stream endpoint will give you the job ads that are currently open for applications. Along with 
 	
 If you only want to get the updates from a certain time point you add it in the format YYYY-MM-DDTHH:MM:SS, for example 2020-01-11T10:00:00. Rate limit is one request per minute.
 
@@ -41,11 +39,19 @@ If you only want to get the updates from a certain time point you add it in the 
 If you’re looking for more advanced search options, please check our [JobSearch API](https://jobtechdev.se/devguide/apis/jobsearch.html).
 
 ## Results
-The results of your queries will be in [JSON](https://en.wikipedia.org/wiki/JSON) format. We won't attempt to explain this attribute by attribute in this document. Instead we've decided to try to include this in the data model which you can find in our [Swagger GUI](https://jobsearch.api.jobtechdev.se).
+The results of your queries will be in [JSON](https://en.wikipedia.org/wiki/JSON) format. We won't attempt to explain the ad objects attribute by attribute in this document. Instead we've decided to try to include this in the data model which you can find in our [Swagger GUI](https://jobsearch.api.jobtechdev.se).
 
 Successful queries will have a response code of 200 and give you a result set that consists of:
 1. Some meta data about your search such as number of hits and the time it took to execute the query and 
-2. The ads that matched your search. 
+2. The ad events that happened within the timespan you set. 
+
+This can be of 3 different kinds: New ads, updated ads, and removed ads. New and updated will look the same, the only thing that distinguisis them is that an updated ad has an ID thats all ready in the database of open ads. 
+
+{
+    "id": 8460272,
+    "removed": true,
+    "removed_date": "2020-01-13T13:03:26"
+  }
 
 ## Errors
 Unsuccessful queries will have a response code of:
