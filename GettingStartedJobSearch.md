@@ -23,14 +23,14 @@ The endpoints for the ads search API are:
 * [ad](#Ad) - returning the ad matching an id.
 * [logo](#Logo) - returns the logo for an ad.
 
-Easiest way to try out the API is to go to the [swagger page](https://jobsearch.api.jobtechdev.se/).
+The easiest way to try out the API is to go to the [swagger page](https://jobsearch.api.jobtechdev.se/).
 But first you need a key which you need to authenticate yourself.
 
 ## Authentication
-For this API, you will need to register your own API key at [www.jobtechdev.se](https://apirequest.jobtechdev.se)
+For this API, you will need to register your own API key at [www.apirequest.jobtechdev.se](https://apirequest.jobtechdev.se)
 
 ## Endpoints
-Below we only show the URLs. If you prefer the curl command, you type it like:
+Below we only show the URL's. If you prefer the curl command, you type it like:
 
 	curl "{URL}" -H "accept: application/json" -H "api-key: {proper_key}"
 	
@@ -76,9 +76,7 @@ This endpoint returns the logo for a given ad's id number.
 If no logo exists, a 1x1 pixel size white image is returned.
 
 ### Jobtech-Taxonomy 
-**NB! this endpoint is deprecated and will be terminated by end of 2020. Use our [Taxonomy API](https://jobtechdev.se/devguide/apis/taxonomy.html) API instead**
-
-If you need help finding the official names for occupations, skills, or geographic place we have temporarily built an endpoint which you will find at https://jobsearch.api.jobtechdev.se/. The real version will be launched during fall 2019. Check out [jobtechdev.se](https://www.jobtechdev.se/) for updates.
+If you need help finding the official names for occupations, skills, or geographic locations you will find them in our [Taxonomy API] https://www.jobtechdev.se/devguide/apis/taxonomy.html
 
 ## Results
 The results of your queries will be in [JSON](https://en.wikipedia.org/wiki/JSON) format. We won't attempt to explain this attribute by attribute in this document. Instead we've decided to try to include this in the data model which you can find in our [Swagger GUI](https://jobsearch.api.jobtechdev.se).
