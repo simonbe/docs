@@ -101,6 +101,7 @@ Unsuccessful queries will have a response code of:
 ## Use cases 
 To help you find your way forward, here are some example of use cases:
 
+* [Searching using Wildcard](#Searching using Wildcard)
 * [Searching for a particular job title](#Searching-for-a-particular-job-title)
 * [Searching only within a specific field of work](#Searching-only-within-a-specific-field-of-work)
 * [Finding jobs near you](#Finding-jobs-near-you)
@@ -108,6 +109,14 @@ To help you find your way forward, here are some example of use cases:
 * [Finding Swedish speaking jobs abroad](#Finding-Swedish-speaking-jobs-abroad)
 * [Customise the result set](#Customise-the-result-set)
 * [Getting all the jobs since date and time](#Getting-all-the-jobs-since-date-and-time)
+
+#### Searching using Wildcard
+For some terms the easiet way to find everything you want is through a wildcard search. An exemple from a user requesting this kind of search was for museum jobs where both searches for "museum" and the various job titles starting with "musei" would be  relevant hits which the information structure currently dont merge very well. From version 1.8.0
+
+request URL
+	
+	https://dev-jobsearch-api.jobtechdev.se/search?q=muse*
+
 
 #### Searching for a particular job title
 The easiest way to get the adds that contain a specific word like a job title is to use a free text query (q) with the _Open-Search_ endpoint. This will give you ads with the specified word in either headline, ad description or place of work.
