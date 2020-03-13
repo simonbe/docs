@@ -101,8 +101,8 @@ Unsuccessful queries will have a response code of:
 ## Use cases 
 To help you find your way forward, here are some example of use cases:
 
-* [Searching using Wildcard](#Searching using Wildcard)
-* [Phrase search](#Phrase search)
+* [Searching using Wildcard](#Searching-using-Wildcard)
+* [Phrase search](#Phrase-search)
 * [Searching for a particular job title](#Searching-for-a-particular-job-title)
 * [Searching only within a specific field of work](#Searching-only-within-a-specific-field-of-work)
 * [Finding jobs near you](#Finding-jobs-near-you)
@@ -110,6 +110,8 @@ To help you find your way forward, here are some example of use cases:
 * [Finding Swedish speaking jobs abroad](#Finding-Swedish-speaking-jobs-abroad)
 * [Customise the result set](#Customise-the-result-set)
 * [Getting all the jobs since date and time](#Getting-all-the-jobs-since-date-and-time)
+* [Simple freetext search](#Simple-freetext-search)
+
 
 #### Searching using Wildcard
 For some terms the easiet way to find everything you want is through a wildcard search. An exemple from a user requesting this kind of search was for museum jobs where both searches for "museum" and the various job titles starting with "musei" would be  relevant hits which the information structure currently dont merge very well. From version 1.8.0
@@ -235,6 +237,10 @@ In the Swagger GUI it's possible to use the X-fields to define which fields to i
 
 ### Getting all the jobs since date and time
 A very common use case is COLLECT ALL THE ADS. We don't want you to use the search API for this. It's expensive in terms of band width, CPU cycles and development time and it's not even guaranteed you'll get everything. Instead we'd like you to use our [bulk load API](https://jobstream.api.jobtechdev.se).
+
+
+### Simple freetext search
+To disable the smart search features of the q-field, the header `x-feature-disable-smart-freetext` to `true`. The result will be that the q-field will work like a simple text search in the ads' header and description fields.
 
 
 # Whats next
