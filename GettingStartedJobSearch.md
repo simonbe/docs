@@ -157,7 +157,7 @@ Request URL
 
 	https://jobsearch.api.jobtechdev.se/taxonomy/search?offset=0&limit=10&q=IT
 
-**NB! this endpoint is deprecated and will be terminated by end of 2020. Use our [Taxonomy API](https://jobtechdev.se/devguide/apis/taxonomy.html) API instead**
+**NB! this endpoint is deprecated and will be terminated by end of 2020. Use our [Taxonomy API](https://www.jobtechdev.se/docs/taxonomy/getting-started/) API instead** 
 
 In the response body you’ll find the conceptId (apaJ_2ja_LuF)for the term Data/IT. Use this with the search endpoint to define the field in which you want to get all the open-api. So now I want to combine this with my favorite language without all those snake related jobs ruining my search.
 
@@ -173,7 +173,7 @@ Request URL
 
        https://jobsearch.api.jobtechdev.se/taxonomy/search?offset=0&limit=10&q=norge
 
-**NB! this endpoint is deprecated and will be terminated by end of 2020. Use our [Taxonomy API](https://jobtechdev.se/devguide/apis/taxonomy.html) API instead**
+**NB! this endpoint is deprecated and will be terminated by end of 2020. Use our [Taxonomy API](https://www.jobtechdev.se/docs/taxonomy/getting-started/) API instead**
 
 And add that parameter conceptId (QJgN_Zge_BzJ) to the country field
 
