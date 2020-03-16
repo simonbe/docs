@@ -1,7 +1,7 @@
 # Search API for job ads - getting started
 
-The aim of this text is to walk you through what you're seeing in the [Swagger-UI](https://jobsearch.api.jobtechdev.se) to give you a bit of orientation on what can be done with the Job Search API. If you are just looking for a way to fetch all the ads please use our [bulk load API](https://jobstream.api.jobtechdev.se)
-The search API is intended for user search not downloading all the job ads. We may invalidate your API Keys if you make excessive amounts of calls that don't fit the intended purpose of this API.
+The aim of this text is to walk you through what you're seeing in the [Swagger-GUI](https://jobsearch.api.jobtechdev.se) to give you a bit of orientation on what can be done with the Job Search API. If you are just looking for a way to fetch all ads please use our [Stream API](https://jobtechdev.se/docs/jobstream/getting-started/)
+The search API is intended for user search not downloading all job ads. We may invalidate your API Key if you make excessive amounts of calls that don't fit the intended purpose of this API.
 
 A bad practice typically means searching for every job of every region every fifth minute.
 A good practice means making lots of varied calls initiated by real users.
@@ -23,7 +23,7 @@ The endpoints for the ads search API are:
 * [ad](#Ad) - returning the ad matching an id.
 * [logo](#Logo) - returns the logo for an ad.
 
-The easiest way to try out the API is to go to the [swagger page](https://jobsearch.api.jobtechdev.se/).
+The easiest way to try out the API is to go to the [Swagger-GUI](https://jobsearch.api.jobtechdev.se/).
 But first you need a key which you need to authenticate yourself.
 
 ## Authentication
@@ -76,10 +76,10 @@ This endpoint returns the logo for a given ad's id number.
 If no logo exists, a 1x1 pixel size white image is returned.
 
 ### Jobtech-Taxonomy 
-If you need help finding the official names for occupations, skills, or geographic locations you will find them in our [Taxonomy API] https://www.jobtechdev.se/docs/taxonomy/getting-started/
+If you need help finding the official names for occupations, skills, or geographic locations you will find them in our [Taxonomy API] (https://www.jobtechdev.se/docs/taxonomy/getting-started/)
 
 ## Results
-The results of your queries will be in [JSON](https://en.wikipedia.org/wiki/JSON) format. We won't attempt to explain this attribute by attribute in this document. Instead we've decided to try to include this in the data model which you can find in our [Swagger GUI](https://jobsearch.api.jobtechdev.se).
+The results of your queries will be in [JSON](https://en.wikipedia.org/wiki/JSON) format. We won't attempt to explain this attribute by attribute in this document. Instead we've decided to try to include this in the data model which you can find in our [Swagger-GUI](https://jobsearch.api.jobtechdev.se).
 
 Successful queries will have a response code of 200 and give you a result set that consists of:
 1. Some meta data about your search such as number of hits and the time it took to execute the query and 
