@@ -39,7 +39,7 @@ You are required to give a certain time point from when you want your ads in the
 	/stream?date=2020-02-03T10:02:00
 
 
-If you’re looking for more advanced search options, please check our [JobSearch API](https://jobtechdev.se/devguide/apis/jobsearch.html).
+If you’re looking for more advanced search options, please check our [JobSearch API](https://jobtechdev.se/docs/jobsearch/getting-started/).
 
 ## Results
 The results of your queries will be in [JSON](https://en.wikipedia.org/wiki/JSON) format. We won't attempt to explain the ad objects attribute by attribute in this document. Instead we've decided to try to include this in the data model which you can find in our [Swagger GUI](https://jobsearch.api.jobtechdev.se).
