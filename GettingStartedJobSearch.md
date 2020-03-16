@@ -140,7 +140,7 @@ Request URL
 
 	https://jobsearch.api.jobtechdev.se/taxonomy/search?offset=0&limit=10&q=souschef
 	
-**NB! this endpoint is deprecated and will be terminated by end of 2020. Use our [Taxonomy API(https://jobtechdev.se/docs/taxonomy/getting-started/) instead** 
+**NB! this endpoint is deprecated and will be terminated by end of 2020. Use our [Taxonomy API](https://jobtechdev.se/docs/taxonomy/getting-started/) instead** 
 
 Now you can use the conceptId (iugg_Qq9_QHH) in _Open-Search_ to fetch the ads registered with the term "souschef" in the occupation-name field:
 
@@ -157,7 +157,7 @@ Request URL
 
 	https://jobsearch.api.jobtechdev.se/taxonomy/search?offset=0&limit=10&q=IT
 
-**NB! this endpoint is deprecated and will be terminated by end of 2020. Use our [Taxonomy API(https://jobtechdev.se/docs/taxonomy/getting-started/) instead** 
+**NB! this endpoint is deprecated and will be terminated by end of 2020. Use our [Taxonomy API](https://jobtechdev.se/docs/taxonomy/getting-started/) instead** 
 
 In the response body you’ll find the conceptId (apaJ_2ja_LuF)for the term Data/IT. Use this with the search endpoint to define the field in which you want to get all the open-api. So now I want to combine this with my favorite language without all those snake related jobs ruining my search.
 
@@ -173,7 +173,7 @@ Request URL
 
        https://jobsearch.api.jobtechdev.se/taxonomy/search?offset=0&limit=10&q=norge
 
-**NB! this endpoint is deprecated and will be terminated by end of 2020. Use our [Taxonomy API(https://jobtechdev.se/docs/taxonomy/getting-started/) instead**
+**NB! this endpoint is deprecated and will be terminated by end of 2020. Use our [Taxonomy API](https://jobtechdev.se/docs/taxonomy/getting-started/) instead**
 
 And add that parameter conceptId (QJgN_Zge_BzJ) to the country field
 
@@ -214,7 +214,7 @@ Request URLs to get conceptId for Sweden and Swedish
 	https://jobsearch.api.jobtechdev.se/taxonomy/search?offset=0&limit=10&q=sverige&type=country
 	https://jobsearch.api.jobtechdev.se/taxonomy/search?offset=0&limit=10&q=svenska&type=language
 
-**NB! this endpoint is deprecated and will be terminated by end of 2020. Use our [Taxonomy API(https://jobtechdev.se/docs/taxonomy/getting-started/) instead** 
+**NB! this endpoint is deprecated and will be terminated by end of 2020. Use our [Taxonomy API](https://jobtechdev.se/docs/taxonomy/getting-started/) instead** 
 
 As return we get conceptId i46j_HmG_v64 for "Sverige" and conceptId zSLA_vw2_FXN for "Svenska".
 
