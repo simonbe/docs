@@ -172,7 +172,7 @@ If you want to search for jobs in Norway you may free text query the taxonomy fo
 
 Request URL
 
-       https://jobsearch.api.jobtechdev.se/taxonomy/search?offset=0&limit=10&q=norge
+	https://jobsearch.api.jobtechdev.se/taxonomy/search?offset=0&limit=10&q=norge
 
 **NB! this endpoint is deprecated and will be terminated by end of 2020. Use our [Taxonomy API](https://jobtechdev.se/docs/taxonomy/getting-started/) instead**
 
@@ -221,7 +221,7 @@ As return we get conceptId i46j_HmG_v64 for "Sverige" and conceptId zSLA_vw2_FXN
 
 Request URL to get jobs in Swedish outside Sweden
 
-      	https://jobsearch.api.jobtechdev.se/search?language=zSLA_vw2_FXN&country=-i46j_HmG_v64
+	https://jobsearch.api.jobtechdev.se/search?language=zSLA_vw2_FXN&country=-i46j_HmG_v64
 
 
 ### Customize the result set
