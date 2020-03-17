@@ -124,6 +124,7 @@ Request URL
 To search in the ad text for a phrase, use the q paramter and surround the phrase with double quotes.
 
 Request URL
+
 	https://jobsearch.api.jobtechdev.se/search?q=%22search%20for%20this%20phrase%22
 
 #### Searching for a particular job title
