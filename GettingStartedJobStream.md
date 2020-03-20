@@ -42,9 +42,9 @@ You are required to give a certain time point from when you want your ads in the
 If you’re looking for more advanced search options, please check our [JobSearch API](https://jobtechdev.se/docs/jobsearch/getting-started/).
 
 ## Results
-The results of your queries will be in [JSON](https://en.wikipedia.org/wiki/JSON) format. We won't attempt to explain the ad objects attribute by attribute in this document. Instead we've decided to try to include this in the data model which you can find in our [Swagger GUI](https://jobsearch.api.jobtechdev.se).
+The results of your queries will be in [JSON](https://en.wikipedia.org/wiki/JSON) format. We won't attempt to explain the ad objects attribute by attribute in this document. Instead we've decided to try to include this in the data model which you can find in our [Swagger GUI](https://jobsearch.api.jobtechdev.se) for JobSearch.
 
-Successful queries will have a response code of 200 and give you a result set that consists of the ad events that happened within the timespan you set. These events can be of 3 different kinds: New ads, updated ads, and removed ads. New and updated will look the same, the only thing that distinguishes them from each other is that an updated ad has an ID that's already in the database of open ads. 
+Successful queries will have a response code of 200 and give you a result set that consists of the ad events that happened within the timespan you set. The timespan is the time between given time in your call up until the current timestamp when the server receives your call. These events can be of 3 different kinds: New ads, updated ads, and removed ads. New and updated will look the same, the only thing that distinguishes them from each other is that an updated ad has an ID that's already in the database of open ads. 
 
 A removal object looks like this:
 
