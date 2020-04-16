@@ -105,7 +105,7 @@ To help you find your way forward, here are some example of use cases:
 * [Phrase search](#Phrase-search)
 * [Searching for a particular job title](#Searching-for-a-particular-job-title)
 * [Searching only within a specific field of work](#Searching-only-within-a-specific-field-of-work)
-* [Filtering employers using organistion number] (#Filtering-employers-using-organistion-number)
+* [Filtering employers using organistion number](#Filtering-employers-using-organistion-number)
 * [Finding jobs near you](#Finding-jobs-near-you)
 * [Negative search](#Negative-search)
 * [Finding Swedish speaking jobs abroad](#Finding-Swedish-speaking-jobs-abroad)
