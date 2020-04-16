@@ -105,6 +105,7 @@ To help you find your way forward, here are some example of use cases:
 * [Phrase search](#Phrase-search)
 * [Searching for a particular job title](#Searching-for-a-particular-job-title)
 * [Searching only within a specific field of work](#Searching-only-within-a-specific-field-of-work)
+* [Filtering employers using organistion number] (#Filtering-employers-using-organistion-number)
 * [Finding jobs near you](#Finding-jobs-near-you)
 * [Negative search](#Negative-search)
 * [Finding Swedish speaking jobs abroad](#Finding-Swedish-speaking-jobs-abroad)
@@ -165,6 +166,22 @@ In the response body you’ll find the conceptId (apaJ_2ja_LuF)for the term Data
 Request URL
 
 	https://jobsearch.api.jobtechdev.se/search?occupation-field=apaJ_2ja_LuF&q=python
+	
+### Filtering employers using organistion number
+If you want to list all the jobs with just one employer you can use the swedish organization number from Bolagsverket. For example its possible to take Arbetsförmedlingens number 2021002114 and basically use that as a filter
+
+Request URL
+	
+	https://jobsearch.api.jobtechdev.se/search?employer=2021002114
+	
+The filter makes a preix search as a default, like a wild card search without the need for an asterix. So a good example of the usefulness of this is to take advantage of the fact that all governmental employers in sweden have org numbers that start with a 2. So you could make a request for Java jobs within the public sector like this.
+
+Request URL
+
+	https://jobsearch.api.jobtechdev.se/search?employer=2&q=java
+
+
+
 
 ### Finding jobs near you
 You can filter your search on geographical terms picked up from the Taxonomy just the same way you can with occupation-titles and occupation-fields. (Concept_id doesn't work everywhere at the time of writing but you can use the numeral id's, they are very official and way less likely to change as skills and occupations sometimes do)
