@@ -13,6 +13,6 @@ Later year ad objects contain more attributes than earlier. Values of attributes
 
 ## Downloads
 
-All: [2006-2019.zip](https://minio.arbetsformedlingen.se/historiska-annonser/pb2006_2019.zip) [4.6 GB]
+All: [2006-2019.zip](https://simonbe.blob.core.windows.net/afhistorik/pb2006_2019.zip) [4.6 GB]
 
 By year: [2006.zip](https://minio.arbetsformedlingen.se/historiska-annonser/2006.zip), [2007.zip](https://minio.arbetsformedlingen.se/historiska-annonser/2007.zip), [2008.zip](https://minio.arbetsformedlingen.se/historiska-annonser/2008.zip), [2009.zip](https://minio.arbetsformedlingen.se/historiska-annonser/2009.zip), [2010.zip](https://minio.arbetsformedlingen.se/historiska-annonser/2010.zip), [2011.zip](https://minio.arbetsformedlingen.se/historiska-annonser/2011.zip), [2012.zip](https://minio.arbetsformedlingen.se/historiska-annonser/2012.zip), [2013.zip](https://minio.arbetsformedlingen.se/historiska-annonser/2013.zip), [2014.zip](https://minio.arbetsformedlingen.se/historiska-annonser/2014.zip), [2015.zip](https://minio.arbetsformedlingen.se/historiska-annonser/2015.zip), [2016.zip](https://minio.arbetsformedlingen.se/historiska-annonser/2016.zip), [2017.zip](https://minio.arbetsformedlingen.se/historiska-annonser/2017.zip), [2018.zip](https://minio.arbetsformedlingen.se/historiska-annonser/2018.zip), [2019.zip](https://minio.arbetsformedlingen.se/historiska-annonser/2019.zip)
